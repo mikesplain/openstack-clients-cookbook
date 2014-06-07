@@ -1,0 +1,13 @@
+name             'openstack-clients'
+maintainer       'Mike Splain'
+maintainer_email 'mike.splain@gmail.com'
+license          'Apache 2.0'
+description      'Installs/Configures openstack-clients'
+long_description 'Installs/Configures openstack-clients'
+version          '0.1.0'
+
+depends 'python'
+depends 'apt'
+depends 'yum-epel'
+depends 'yum'
+depends 'build-essential'

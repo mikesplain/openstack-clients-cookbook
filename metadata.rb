@@ -4,7 +4,7 @@ maintainer_email 'mike.splain@gmail.com'
 license 'Apache 2.0'
 description 'Installs/Configures openstack-clients'
 long_description 'Installs/Configures openstack-clients'
-version '0.1.2'
+version '0.1.3'
 
 depends 'python', '~> 1.4'
 depends 'apt', '~> 2.4'

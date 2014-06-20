@@ -3,8 +3,7 @@ require 'serverspec'
 include Serverspec::Helper::Exec
 include Serverspec::Helper::DetectOS
 
-
-describe "python" do
+describe 'python' do
 
   # it "is listening on port 9418" do
   #   expect(port(9418)).to be_listening
@@ -19,12 +18,12 @@ describe "python" do
   end
 
   case os[:family]
-  when "Centos", "RedHat"
-    pip_location = "/usr/bin/pip"
-  when "Ubuntu", "Debian"
-    pip_location = "/usr/local/bin/pip"
-  when "Fedora"
-    pip_location = "/usr/bin/pip"
+  when 'Centos', 'RedHat'
+    pip_location = '/usr/bin/pip'
+  when 'Ubuntu', 'Debian'
+    pip_location = '/usr/local/bin/pip'
+  when 'Fedora'
+    pip_location = '/usr/bin/pip'
   end
 
   describe file(pip_location) do

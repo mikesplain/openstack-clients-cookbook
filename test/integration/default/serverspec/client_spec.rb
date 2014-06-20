@@ -16,7 +16,16 @@ describe 'clients' do
     exec_location = '/bin'
   end
 
-  %w(keystone nova glance swift ceilometer neutron cinder trove heat barbican).each do |client|
+  %w(keystone
+     nova
+     glance
+     swift
+     ceilometer
+     neutron
+     cinder
+     trove
+     heat
+     barbican).each do |client|
     describe file("#{exec_location}/#{client}") do
       it { should be_executable }
     end

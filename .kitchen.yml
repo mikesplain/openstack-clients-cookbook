@@ -23,6 +23,27 @@ suites:
   - name: default
     run_list:
       - recipe[openstack-clients::default]
+
+  - name: openstackrc
+    run_list:
+      - recipe[openstack-clients::openstackrc]
+    attributes:
+      openstack-clients:
+        openstackrc:
+          configs:
+            project1:
+              OS_AUTH_URL: 'https://identity.project1.openstack.com:5443/v2.0'
+              OS_TENANT_ID: '29h8gwh0wg0h2th0'
+              OS_TENANT_NAME: 'project1'
+              OS_USERNAME: 'project1'
+              OS_PASSWORD: 'password1'
+            project2:
+              OS_AUTH_URL: 'https://identity.project2.openstack.com:5443/v2.0'
+              OS_TENANT_ID: 'y4j0erg0j40'
+              OS_TENANT_NAME: 'project2'
+              OS_USERNAME: 'project2'
+              OS_PASSWORD: 'password2'
+
 #  - name: nova
 #    run_list:
 #      - recipe[openstack-clients::nova]

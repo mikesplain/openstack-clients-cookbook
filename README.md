@@ -1,4 +1,4 @@
-[![Dependency Status](https://gemnasium.com/mikesplain/openstack-clients-cookbook.svg)](https://gemnasium.com/mikesplain/openstack-clients-cookbook)
+[![Build Status](https://travis-ci.org/mikesplain/openstack-clients-cookbook.svg)](https://travis-ci.org/mikesplain/openstack-clients-cookbook)[![Dependency Status](https://gemnasium.com/mikesplain/openstack-clients-cookbook.svg)](https://gemnasium.com/mikesplain/openstack-clients-cookbook)
 
 
 OpenStack-Clients Cookbook

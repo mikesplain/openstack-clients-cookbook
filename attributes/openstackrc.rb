@@ -6,7 +6,6 @@
 #
 #
 
-
 default['openstack-clients']['openstackrc']['binpath'] = '/usr/local/bin'
 
 default['openstack-clients']['openstackrc']['user'] = 'root'

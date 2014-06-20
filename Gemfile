@@ -1,23 +1,9 @@
-# A sample Gemfile
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-group :lint do
-  gem 'foodcritic'
-  gem 'rubocop'
-end
+gem 'rake'
 
-group :kitchen_common do
-  gem 'test-kitchen'
-end
-
-group :development do
-  gem 'ruby_gntp'
-  gem 'growl'
-  gem 'rb-fsevent'
-  gem 'guard', '~> 2.4'
-  gem 'guard-kitchen'
-  gem 'guard-foodcritic'
-  gem 'guard-rspec'
-  gem 'guard-rubocop'
-  gem 'rake'
+group :test do
+  gem 'foodcritic', '~> 4.0'
+  gem 'rubocop', '~> 0.23'
+  gem 'chefspec', '~> 4.0'
 end

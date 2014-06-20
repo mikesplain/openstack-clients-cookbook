@@ -7,10 +7,10 @@
 #
 # This recipe allows you to manage Python install in a common location
 
-case node['platform_family']
+case node['platform']
 when "debian", "ubuntu"
   include_recipe "apt"
-when "rhel", "centos"
+when "centos", "redhat", "amazon", "scientific"
   include_recipe "yum-epel"
 when "fedora"
   include_recipe "yum"

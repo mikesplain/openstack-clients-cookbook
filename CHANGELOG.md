@@ -1,6 +1,11 @@
 openstack-clients Cookbook
 =========================
 
+v0.2.2 (2014-06-22)
+-------------------
+Fix .DS_Store crap
+
+
 v0.2.0 (2014-06-20)
 -------------------
 - First pass on Openstack openrc integration

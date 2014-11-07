@@ -1,13 +1,13 @@
 ---
 driver:
   name: digitalocean
+  region: nyc3
+  size: 512mb
+  ssh_key: <%= ENV['DIGITALOCEAN_SSH_KEY_PATH'] %>
 
 platforms:
 - name: ubuntu-12-04-x64
-  driver_config:
-    region: nyc3
-    size: 512mb
-    ssh_key: <%= ENV['DIGITALOCEAN_SSH_KEY_PATH'] %>
+- name: centos-6-5-x64
 
 suites:
 - name: default

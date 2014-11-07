@@ -15,7 +15,7 @@ describe 'openstackrc' do
     its(:content) { should match(/project2/) }
   end
   describe command('which openstack') do
-    its(:stdout) {should match '/usr/local/bin/openstack' }
+    its(:stdout) { should match '/usr/local/bin/openstack' }
   end
 
 end

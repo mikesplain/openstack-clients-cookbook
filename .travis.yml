@@ -1,7 +1,18 @@
 rvm:
-  - 1.9.3
-  - 2.0.0
-  - 2.1
-
+- 2.1
+before_install:
+- openssl aes-256-cbc -K $encrypted_2367e6cd31db_key -iv $encrypted_2367e6cd31db_iv
+  -in travis-openstack-clients-cookbook.pem.enc -out travis-openstack-clients-cookbook.pem
+  -d
+install:
+- bundle install --without vagrant
+- bundle exec berks install
 script:
-  - bundle exec rake style
+- bundle exec rake travis
+env:
+  global:
+  - secure: d3mbPYI580hOzHAnq+hoNPuM8YsuoJogKj++hcZOgmqMbiq44wANMkyYW6pMlDcKnOIYfhpUq37CfSRYu6dOA2TNv/E3vwEwCRnW3Itc1QN+2x/ypE4XBXC0dZzXMgELVRERgxbSbqXMTAk4lFrwCbWHB4X4sixTgHY+I7SLIxg=
+  - secure: QUjh8k9CxC27zbzENRXdznZqPfB1tfZyH3jShnuRnobtvmOxaTQx9m6RRa30UWiBc3UXFv5zj9xGSpPAQ/VIlL89pOLQk8dJOnzzPwknEq+Y/G8+KXyOM3SKagqdG2cU7ZlttdN07dWRWkEF4tOm3l45F5LQJSY3OYpeh6zIh+Q=
+  - secure: BzO0cqxgJTL6z0nUSaKuBa+LYoAuKlV3QSclU9EqfAp4QiF32tGfswiZWAe9CquOs2xE/U+mxUNY893P1N5nNk12+3gptC483qeTo75ZQOyiACqCOfp1fUCy2rpsHMMe2XBFYQfsWFIe1ea3YpVwijuJ8gIIdyuSewMlDy+RNFA=
+  - secure: P6TSYVPdI3wYpuW/rjZ8Pc6OWB7zAzp3xWYWLs+5dKLUOdHG1e3b7CfNePt/UpyfKS9SEDOrEEfvo1E8Y7USfF5nlGUuyNOL+yR74FjT82quStpPeAXhMYg9jGD1Y17tvyaD7D6CHf/l1oePZM/mmFvBkeOn6bthCHXYaxhc04A=
+  - secure: Mh+AUWtjMgO9c/84kA5TxeYDbF5YVDJ4IW4TlsFa9zFsN+cpe8ohwHvO6l3ga3myVIwKvpC/YYeXVCUnJ8H+wmfQWibqTWTzcXTzL1wV9hFCcIs9rFOV7ngZM2PNkc1iIjog96FYInlpFOXg+XERLcsbE2lGEzWTyOKT3xUAok4=

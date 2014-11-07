@@ -1,4 +1,6 @@
 require 'bundler/setup'
+require 'kitchen'
+
 
 # Style tests. Rubocop and Foodcritic
 namespace :style do
@@ -16,5 +18,27 @@ namespace :style do
   end
 end
 
+namespace :integration do
+  desc 'Run Test Kitchen with cloud plugins'
+  task :cloud do
+    run_kitchen = true
+    if ENV['TRAVIS'] == 'true' && ENV['TRAVIS_PULL_REQUEST'] != 'false'
+      run_kitchen = false
+    end
+
+    if run_kitchen
+      Kitchen.logger = Kitchen.default_file_logger
+      @loader = Kitchen::Loader::YAML.new(project_config: './.kitchen.cloud.yml')
+      config = Kitchen::Config.new(loader: @loader)
+      config.instances.each do |instance|
+        instance.test(:always)
+      end
+    end
+  end
+end
+
 desc 'Run all style checks'
 task style: ['style:chef', 'style:ruby']
+
+desc 'Run all tests on Travis'
+task travis: %w(style integration:cloud)

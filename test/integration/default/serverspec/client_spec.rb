@@ -1,18 +1,15 @@
 require 'serverspec'
 
-include Serverspec::Helper::Exec
-include Serverspec::Helper::DetectOS
-
 describe 'clients' do
 
   puts "Family: #{os[:family]}"
 
   case os[:family]
-  when 'Centos', 'RedHat'
+  when 'centos', 'redhat'
     exec_location = '/usr/bin'
-  when 'Ubuntu', 'Debian'
+  when 'ubuntu', 'debian'
     exec_location = '/usr/local/bin'
-  when 'Fedora'
+  when 'fedora'
     exec_location = '/bin'
   end
 

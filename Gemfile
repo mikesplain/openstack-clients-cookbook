@@ -6,11 +6,9 @@ gem 'berkshelf'
 group :test do
   gem 'foodcritic'
   gem 'rubocop'
-  gem 'chefspec'
 end
 
 group :test, :integration do
-  gem 'test-kitchen', '~> 1.2'
-  gem 'kitchen-ec2',
-      github: 'test-kitchen/kitchen-ec2'
+  gem 'test-kitchen'
+  gem 'kitchen-digitalocean'
 end

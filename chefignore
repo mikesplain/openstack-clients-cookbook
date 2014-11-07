@@ -94,3 +94,6 @@ Vagrantfile
 # Travis #
 ##########
 .travis.yml
+travis-openstack-clients-cookbook.enc
+.kitchen.cloud.yml
+release.*

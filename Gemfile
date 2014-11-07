@@ -1,9 +1,14 @@
 source 'https://rubygems.org'
 
 gem 'rake'
+gem 'berkshelf'
 
 group :test do
-  gem 'foodcritic', '~> 4.0'
-  gem 'rubocop', '~> 0.23'
-  gem 'chefspec', '~> 4.0'
+  gem 'foodcritic'
+  gem 'rubocop'
+end
+
+group :test, :integration do
+  gem 'test-kitchen'
+  gem 'kitchen-digitalocean'
 end

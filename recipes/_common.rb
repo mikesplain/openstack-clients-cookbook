@@ -11,7 +11,11 @@ case node['platform']
 when 'debian', 'ubuntu'
   include_recipe 'apt'
 when 'centos', 'redhat', 'amazon', 'scientific'
-  include_recipe 'yum-epel'
+  if node['platform_version'] == '5.10'
+    include_recipe 'yum-epel'
+  else
+    include_recipe 'yum-centos'
+  end
 when 'fedora'
   include_recipe 'yum'
 end

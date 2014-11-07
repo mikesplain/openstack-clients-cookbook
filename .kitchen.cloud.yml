@@ -8,7 +8,7 @@ driver:
   region: us-east-1
   availability_zone: us-east-1b
   username: ubuntu
-  flavor_id: t1.micro
+  flavor_id: m1.small
   interface: public
   price: <%= ENV['AWS_PRICE'] %>
 

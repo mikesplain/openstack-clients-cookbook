@@ -1,7 +1,6 @@
 require 'bundler/setup'
 require 'kitchen'
 
-
 # Style tests. Rubocop and Foodcritic
 namespace :style do
   require 'rubocop/rake_task'

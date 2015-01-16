@@ -8,7 +8,10 @@
 
 case node['platform']
 when 'debian', 'ubuntu'
-  default['openstack-clients']['packages'] = %w(libffi-dev)
+  default['openstack-clients']['packages'] = %w(
+    libffi-dev
+    libssl-dev
+  )
 when 'centos', 'redhat', 'amazon', 'scientific', 'fedora'
   default['openstack-clients']['packages'] = %w(
     libffi-devel

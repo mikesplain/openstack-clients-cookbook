@@ -1,7 +1,6 @@
 require 'serverspec'
 
 describe 'clients' do
-
   puts "Family: #{os[:family]}"
 
   case os[:family]
@@ -27,5 +26,4 @@ describe 'clients' do
       it { should be_executable }
     end
   end
-
 end

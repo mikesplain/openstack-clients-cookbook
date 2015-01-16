@@ -1,7 +1,6 @@
 require 'serverspec'
 
 describe 'python' do
-
   # it "is listening on port 9418" do
   #   expect(port(9418)).to be_listening
   # end
@@ -26,5 +25,4 @@ describe 'python' do
   describe file(pip_location) do
     it { should be_executable }
   end
-
 end

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mikesplain/openstack-clients-cookbook.svg)](https://travis-ci.org/mikesplain/openstack-clients-cookbook)[![Dependency Status](https://gemnasium.com/mikesplain/openstack-clients-cookbook.svg)](https://gemnasium.com/mikesplain/openstack-clients-cookbook)
+[![Circle CI](https://circleci.com/gh/mikesplain/openstack-clients-cookbook.svg?style=svg)](https://circleci.com/gh/mikesplain/openstack-clients-cookbook)[![Dependency Status](https://gemnasium.com/mikesplain/openstack-clients-cookbook.svg)](https://gemnasium.com/mikesplain/openstack-clients-cookbook)
 
 
 OpenStack-Clients Cookbook

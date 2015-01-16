@@ -8,7 +8,7 @@ group :test do
   gem 'rubocop'
 end
 
-group :test, :integration do
+group :integration do
   gem 'test-kitchen'
-  gem 'kitchen-digitalocean'
+  gem 'kitchen-docker'
 end

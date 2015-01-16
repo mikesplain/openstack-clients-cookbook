@@ -1,7 +1,6 @@
 require 'serverspec'
 
 describe 'openstackrc' do
-
   case os[:family]
   when 'centos', 'redHat', 'fedora'
     RSpec.configure do |c|
@@ -17,5 +16,4 @@ describe 'openstackrc' do
   describe command('which openstack') do
     its(:stdout) { should match '/usr/local/bin/openstack' }
   end
-
 end
